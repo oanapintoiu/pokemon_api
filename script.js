@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
  
   searchButton.addEventListener("click", async () => {
+    clearFields();
     try {
     const pokemonNameorId = searchInput.value;
     if (!pokemonNameorId) return;
@@ -37,6 +38,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     alert('Pokémon not found');
   }
+
+  function clearFields () {
+    document.getElementById("pokemon-name").textContent = '';
+    document.getElementById("sprite").src = '';
+    document.getElementById("pokemon-id").textContent = '';
+    document.getElementById("weight").textContent = '';
+    document.getElementById("height").textContent = '';
+    document.getElementById("hp").textContent= '';
+    document.getElementById("attack").textContent= '';
+    document.getElementById("defense").textContent= '';
+    document.getElementById("special-attack").textContent= '';
+    document.getElementById("special-defense").textContent= '';
+    document.getElementById("speed").textContent= '';
+    document.getElementById("types").textContent= '';
+  } 
   });
 });
 

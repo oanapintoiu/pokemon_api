@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const pokemon = await getPokemonData(pokemonNameorId);
 
     document.getElementById("pokemon-name").textContent = pokemon.name;
+    document.getElementById("pokemon-id").textContent = `#${pokemon.id}`
   });
 });
 

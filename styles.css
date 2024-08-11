@@ -56,8 +56,8 @@ button#search-button:hover {
     background-color: white;
     border: 1px solid #3b4cca;
     border-radius: 5px;
-    padding: 15px;
-    margin: 15px 0;
+    padding: 5px;
+    margin: 5px 0;
 }
 
 #sprite {

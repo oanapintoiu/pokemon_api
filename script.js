@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("pokemon-id").textContent = `#${pokemon.id}`;
     document.getElementById("weight").textContent = `Weight: ${pokemon.weight}`;
     document.getElementById("height").textContent = `Height: ${pokemon.height}`;
+    document.getElementById("hp").textContent= `HP: ${pokemon.stats[0].base_stat}`;
+    document.getElementById("attack").textContent= `Attack: ${pokemon.stats[1].base_stat}`;
+    document.getElementById("defense").textContent= `Defense: ${pokemon.stats[2].base_stat}`;
+    document.getElementById("special-attack").textContent= `Special attack: ${pokemon.stats[3].base_stat}`;
+    document.getElementById("special-defense").textContent= `Special defense: ${pokemon.stats[4].base_stat}`;
+    document.getElementById("speed").textContent= `Speed: ${pokemon.stats[5].base_stat}`;
   });
 });
 

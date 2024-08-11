@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log('Types:', pokemon.types);
     console.log('Sprites', pokemon.sprites);
 
-    document.getElementById("pokemon-name").textContent = pokemon.name;
+    document.getElementById("pokemon-name").textContent = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase();
     document.getElementById("sprite").src = pokemon.sprites.front_default;
     document.getElementById("pokemon-id").textContent = `#${pokemon.id}`;
     document.getElementById("weight").textContent = `Weight: ${pokemon.weight}`;
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("special-attack").textContent= `Special attack: ${pokemon.stats[3].base_stat}`;
     document.getElementById("special-defense").textContent= `Special defense: ${pokemon.stats[4].base_stat}`;
     document.getElementById("speed").textContent= `Speed: ${pokemon.stats[5].base_stat}`;
-    document.getElementById("types").textContent= `Types: ${pokemon.types[0].type.name}`;
+    document.getElementById("types").textContent= `Types: ${pokemon.types[0].type.name.charAt(0).toUpperCase() + pokemon.types[0].type.name.slice(1).toLowerCase()}`;
   } catch (error) {
     alert('Pokémon not found');
   }

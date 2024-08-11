@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const searchButton = document.getElementById("search-button");
   const searchInput = document.getElementById("search-input");
 
+ 
   searchButton.addEventListener("click", async () => {
+    try {
     const pokemonNameorId = searchInput.value;
     if (!pokemonNameorId) return;
 
@@ -32,7 +34,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("special-defense").textContent= `Special defense: ${pokemon.stats[4].base_stat}`;
     document.getElementById("speed").textContent= `Speed: ${pokemon.stats[5].base_stat}`;
     document.getElementById("types").textContent= `Types: ${pokemon.types[0].type.name}`;
-
+  } catch (error) {
+    alert('Pokémon not found');
+  }
   });
 });
 

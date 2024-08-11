@@ -9,7 +9,18 @@ This project was done as part of [JavaScript Algorithm and Data Structures Certi
 [Result](#result) | [Features](#features) | [Technologies Used](#technologies-used) | [Installation](#installation) | [Usage](#usage) |
 ## Result
 
-![Pokémon Search App](./img/pokemon-search.png)
+Searching by name
+
+<img src="./img/pika.png" alt="Searching by name"/>
+
+Searching by ID: 
+
+<img src="./img/squirtle.png" alt="Searching by ID"/>
+
+Searching: Entering invalid name: 
+
+<img src="./img/snorlax.png" alt="invalid name"/>
+
 
 ## Features
 

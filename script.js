@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!pokemonNameorId) return;
 
     const pokemon = await getPokemonData(pokemonNameorId);
+    console.log(pokemon.stats);
 
     document.getElementById("pokemon-name").textContent = pokemon.name;
     document.getElementById("pokemon-id").textContent = `#${pokemon.id}`;
@@ -24,4 +25,3 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 });
 
-module.exports = { getPokemonData };

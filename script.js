@@ -7,4 +7,18 @@ async function getPokemonData(pokemonName) {
   return response.json();
 }
 
+document.addEventListener("DOMContentLoaded", async () => {
+  const searchButton = document.getElementById("search-button");
+  const searchInput = document.getElementById("search-input");
+
+  searchButton.addEventListener("click", async () => {
+    const pokemonNameorId = searchInput.value;
+    if (!pokemonNameorId) return;
+
+    const pokemon = await getPokemonData(pokemonNameorId);
+
+    document.getElementById("pokemon-name").textContent = pokemon.name;
+  });
+});
+
 module.exports = { getPokemonData };

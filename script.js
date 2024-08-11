@@ -17,8 +17,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const pokemon = await getPokemonData(pokemonNameorId);
     console.log(pokemon.stats);
+    console.log('Types:', pokemon.types);
+    console.log('Sprites', pokemon.sprites);
 
     document.getElementById("pokemon-name").textContent = pokemon.name;
+    document.getElementById("sprite").src = pokemon.sprites.front_default;
     document.getElementById("pokemon-id").textContent = `#${pokemon.id}`;
     document.getElementById("weight").textContent = `Weight: ${pokemon.weight}`;
     document.getElementById("height").textContent = `Height: ${pokemon.height}`;
@@ -28,6 +31,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("special-attack").textContent= `Special attack: ${pokemon.stats[3].base_stat}`;
     document.getElementById("special-defense").textContent= `Special defense: ${pokemon.stats[4].base_stat}`;
     document.getElementById("speed").textContent= `Speed: ${pokemon.stats[5].base_stat}`;
+    document.getElementById("types").textContent= `Types: ${pokemon.types[0].type.name}`;
+
   });
 });
 

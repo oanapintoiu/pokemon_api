@@ -1,4 +1,4 @@
-# Pokémon Search App
+# Pokémon Search App [(Deployed)](oanapintoiu.github.io/pokemon_api/)
 
 This repository contains a simple web application that allows users to search for Pokémon by name or ID using the Pokémon API. The application retrieves and displays various details about the Pokémon, including its stats, types, and sprite.
 

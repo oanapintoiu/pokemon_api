@@ -11,7 +11,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   const searchButton = document.getElementById("search-button");
   const searchInput = document.getElementById("search-input");
 
- 
+ searchInput,addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    searchButton.click();
+  }
+ })
+
   searchButton.addEventListener("click", async () => {
     clearFields();
     try {
